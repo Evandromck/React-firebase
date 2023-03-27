@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigation } from "@react-navigation/stack";
+import {  createStackNavigator } from "@react-navigation/stack";
 
 import Task from "./src/pages/Task"
 
-const Stack = createStackNavigation()
+const Stack = createStackNavigator()
 
 export default function App() {
   return (
