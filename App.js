@@ -1,9 +1,10 @@
 import React from 'react'
-import { StyleSheet } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import {  createStackNavigator } from "@react-navigation/stack";
 
 import Task from "./src/pages/Task"
+import NewTaks from "./src/pages/NewTask"
+import Details from './src/pages/Details';
 
 const Stack = createStackNavigator()
 
@@ -14,6 +15,26 @@ export default function App() {
         <Stack.Screen 
         name="Task"
         component={Task}
+        options={{
+          headerTintColor:"red"
+        }}
+        
+        />
+        <Stack.Screen 
+        name="NewTask"
+        component={NewTaks}
+        options={{
+          headerTintColor:"red"
+        }}
+        
+        />
+        <Stack.Screen 
+        name="Details"
+        component={Details}
+        options={{
+          headerTintColor:"red"
+        }}
+        
         />
 
         
@@ -23,12 +44,3 @@ export default function App() {
     
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
